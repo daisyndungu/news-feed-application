@@ -1,5 +1,5 @@
 module.exports = {
-    entry: './app/app.js',
+    entry: './src/app.js',
     output: {
         filename: 'bundle.js'
     },
@@ -17,6 +17,7 @@ module.exports = {
         ]
     },
     devServer: {
-        port: 3000
+        historyApiFallback: true,
+        port: 3000,
     }
 };
