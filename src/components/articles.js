@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Sources from './sources';
 import {Card, CardHeader, CardTitle, CardText, CardMedia} from 'material-ui';
-
-// https://newsapi.org/v1/articles?source=the-next-web&sortBy=latest&apiKey={API_KEY}
 
 export default class Article extends React.Component {
     constructor(props){

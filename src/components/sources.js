@@ -4,8 +4,6 @@ import axios from 'axios';
 import '../style/bootstrap/css/bootstrap.css';
 import '../style/bootstrap/css/bootstrap.min.css';
 import { Link } from 'react-router';
-import { bindActionCreators } from 'redux';
-import {selectedSource} from '../actions/loadSpecificArticles';
 import { routerActions } from 'react-router-redux';
 import history from '../app';
 
@@ -15,11 +13,7 @@ export default class Sources extends React.Component {
         this.state = {
             sources: []
         };
-        // const loadSpecificArticle = (source_id) => {
-        //     return (dispatch) => {
-        //         dispatch(push(`/articles`))
-        //       }
-        // }
+
     }
 
     componentDidMount() {
@@ -27,12 +21,7 @@ export default class Sources extends React.Component {
         .then(res => {
             const sources = res.data.sources.map(sources => sources);
             this.setState({ sources });
-            // localStorage.setItem('sources', sources);
-            // const sources = localStorage.getItem('sources');
-            // this.setState({ sources });
-            // this.setState.sources = this.source;
-            // console.log(this.state.sources)
-            
+  
         });
     }
 
@@ -41,29 +30,8 @@ export default class Sources extends React.Component {
         return history.push(`/${sourceId}/articles`);
     }
 
-    // onSectionClick (source_id){
-    //     selectedSource(source_id)
-    //  }
-    // mapDispatchtoProps(dispatch){
-    //     return bindActionCreators({selectedSource: selectedSource}, dispatch)
-    // }
-
     render(){
         return (
-
-            // use ma
-        // <div>
-        //     {this.state.sources.map(sources =>
-        //     <div key={sources.id}>
-        //         <Card>
-        //             <CardHeader>{sources.name}</CardHeader>
-        //             <CardTitle subtitle={sources.category} />
-        //             <CardText>
-        //                 {sources.description}
-        //             </CardText>
-        //         </Card>
-        //     </div>)}
-        // </div>
             <div  className="ui four cards">
                 {this.state.sources.map(sources =>
                         <a  key={sources.id} className=" ui raised card" onClick={() => this.selectedSource(sources.id) } >
