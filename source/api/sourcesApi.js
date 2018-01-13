@@ -1,6 +1,5 @@
 import React from 'react';
-import axios from 'axios';
-import { error } from 'util';
+import axios from 'axios'
 
 class SourceApi {
     static getAllSources(){

@@ -1,3 +1,4 @@
 export default{
-    sources: []
+    sources: [],
+    articles: []
 }

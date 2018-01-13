@@ -1,28 +1,32 @@
 import React, { Component } from 'react';
 import {PropTypes} from 'prop-types';
 import {connect} from 'react-redux';
-import * as actionTypes from '../actions/actionTypes';
+import {Link} from 'react-router';
+import Card, {CardHeader, CardExpandable, CardText, CardTitle, CardActions} from 'material-ui/Card'
+import FlatButton from 'material-ui/FlatButton';
+import Typography from 'material-ui/styles/typography'
+
+// Style
+import './sourcepage.scss'
 
 class SourcesPage extends Component{
 
     render () {
         return(
-            <div>
-                {this.props.sources.map(sources =>
-                    <a  key={sources.id} className=" ui raised card" >
-                        <div className="content">
-                            <div className="header"><strong>
-                                <u>
-                                    {sources.name}
-                                </u></strong></div>
-                            <div className="meta">
-                                <span className="category">{sources.category}</span>
-                            </div>
-                            <div className="description right floated">
-                                <p>{sources.description}</p>
-                            </div>
-                        </div>
-                    </a>
+            <div className="feeds-container">
+                {this.props.sources.map(source =>
+                <Card key={source.id} className="card" >
+                   <CardHeader className="header"
+                   title={source.name}
+                   /> 
+                   <CardText>
+                        {source.description}
+                    </CardText>
+
+                   <CardActions>
+                    <FlatButton className='button' label="Read Articles" href={`/${source.id}`} primary={true}/>
+                   </CardActions>
+                </Card>
                 )}
             </div>
         );
@@ -38,5 +42,4 @@ function mapStateToProps(state, ownProps){
         sources: state.sources
     }
 }
-
 export default connect(mapStateToProps)(SourcesPage);

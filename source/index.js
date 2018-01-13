@@ -4,8 +4,17 @@ import {Router, Route, Switch, browserHistory} from 'react-router';
 import { Provider } from 'react-redux';
 import createHistory from 'history/createBrowserHistory';
 import configureStore from './store/configureStore'; 
-import * as sourceActions from './actions/sourceActions';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
+// Components
 import SourcePage from './components/SourcesPage';
+import ArticlesPage from './components/ArticlesPage';
+
+// action
+import * as sourceActions from './actions/sourceActions';
+
+// Routes
+import Routes from './routes'
 
 const history = createHistory();
 const store = configureStore();
@@ -15,7 +24,9 @@ store.dispatch(sourceActions.loadSources());
 render(
     <Provider store={store}>
         <Router history={history}>
-            <Route exact path='/sources' component={SourcePage} />
+                <MuiThemeProvider>
+                    <Routes />
+                </MuiThemeProvider>      
         </Router>
     </Provider>, document.getElementById('app')
 );
