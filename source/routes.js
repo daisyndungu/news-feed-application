@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Route, Switch} from 'react-router';
-import SourcePage from './components/SourcesPage';
-import ArticlesPage from './components/ArticlesPage'
+import SourcePage from './components/sources/SourcesPage';
+import ArticlesPage from './components/articles/ArticlesPage'
 
 export default class Routes extends Component {
     render(){

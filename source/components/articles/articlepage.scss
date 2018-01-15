@@ -1,0 +1,27 @@
+
+.feeds-container {
+    display: flex;
+    // stlyes the flex direction and flex-wrap
+    // flex-flow: row wrap;
+    // justify-content: space-evenly;
+    .articlecard {
+        width: 65rem !important;
+        height: 17rem !important;
+        margin-bottom: 15px;
+        .articleheader{
+            font-size: 50px;
+            font-weight: 600 !important;
+            text-align: left;
+            padding-bottom: 0.02em !important;
+        }
+        .articletext{
+            padding-top: 0.02em !important;
+            padding-bottom: 0.02em !important;
+            text-align: justify;
+        }
+        h6{
+            color: gray;
+            padding-top: 0.05em !important;     
+        }
+    }
+}

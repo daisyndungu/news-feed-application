@@ -7,8 +7,7 @@ import configureStore from './store/configureStore';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 // Components
-import SourcePage from './components/SourcesPage';
-import ArticlesPage from './components/ArticlesPage';
+import SourcePage from './components/sources/SourcesPage';
 
 // action
 import * as sourceActions from './actions/sourceActions';

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {PropTypes} from 'prop-types';
 import {connect} from 'react-redux';
 import {Link} from 'react-router';
-import Card, {CardHeader, CardExpandable, CardText, CardTitle, CardActions} from 'material-ui/Card'
+import Card, {CardHeader, CardExpandable, CardText, CardTitle, CardActions} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
 import Typography from 'material-ui/styles/typography'
 
@@ -19,10 +19,7 @@ class SourcesPage extends Component{
                    <CardHeader className="header"
                    title={source.name}
                    /> 
-                   <CardText>
-                        {source.description}
-                    </CardText>
-
+                   <CardText>{source.description}</CardText>
                    <CardActions>
                     <FlatButton className='button' label="Read Articles" href={`/${source.id}`} primary={true}/>
                    </CardActions>
