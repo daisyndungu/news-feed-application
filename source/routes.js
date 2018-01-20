@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Route, Switch} from 'react-router';
+import {Route} from 'react-router';
 import {IndexRoute} from 'react-router-dom';
 
 // components
@@ -12,10 +12,8 @@ export default class Routes extends Component {
         return (
             <div>
                 <App>
-                    <Switch>
-                        <Route exact path='/' component={SourcePage} />
-                        <Route path='/:source_id' component={ArticlesPage} />
-                    </Switch>
+                    <Route exact path='/' component={SourcePage} />
+                    <Route path='/:source_id' component={ArticlesPage} />
                 </App>
             </div>
         )

@@ -29,3 +29,5 @@ render(
         </Router>
     </Provider>, document.getElementById('app')
 );
+
+export default  history;

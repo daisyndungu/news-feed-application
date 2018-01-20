@@ -10,7 +10,7 @@ import Typography from 'material-ui/styles/typography';
 import './sourcepage.scss'
 
 class SourcesPage extends Component{
-
+    
     render () {
         return(
             <div className="feeds-container">

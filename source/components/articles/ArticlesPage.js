@@ -12,7 +12,7 @@ import * as articleActions from '../../actions/articleActions';
 import './articlepage.scss'
 
 class ArticlesPage extends Component {
-    componentDidMount() {
+    componentDidMount() { 
         this.source_id = this.props.match.params.source_id
         this.props.dispatch(articleActions.loadArticles(this.source_id));
     }
