@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import {PropTypes} from 'prop-types';
 import {connect} from 'react-redux';
 import {Link} from 'react-router';
-import Card, {CardHeader, CardExpandable, CardText, CardTitle, CardActions} from 'material-ui/Card';
+import Card, {CardHeader, CardText, CardActions} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
-import Typography from 'material-ui/styles/typography'
+import Typography from 'material-ui/styles/typography';
 
 // Style
 import './sourcepage.scss'

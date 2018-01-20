@@ -1,4 +1,7 @@
+// API
 import SourceApi from '../api/sourcesApi';
+
+// actions
 import * as actionTypes from './actionTypes';
 
 // action creators

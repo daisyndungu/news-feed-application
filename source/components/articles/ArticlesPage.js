@@ -6,10 +6,10 @@ import dateformat from 'dateformat';
 import FlatButton from 'material-ui/FlatButton';
 
 // actions
-import * as articleActions from '../../actions/articleActions'
+import * as articleActions from '../../actions/articleActions';
 
 // Style
-import './articlepage.scss';
+import './articlepage.scss'
 
 class ArticlesPage extends Component {
     componentDidMount() {

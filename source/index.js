@@ -23,9 +23,9 @@ store.dispatch(sourceActions.loadSources());
 render(
     <Provider store={store}>
         <Router history={history}>
-                <MuiThemeProvider>
-                    <Routes />
-                </MuiThemeProvider>      
+            <MuiThemeProvider>
+                <Routes />
+            </MuiThemeProvider>      
         </Router>
     </Provider>, document.getElementById('app')
 );
