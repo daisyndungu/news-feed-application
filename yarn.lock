@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+"@types/react@*":
+  version "16.0.34"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.0.34.tgz#7a8f795afd8a404a9c4af9539b24c75d3996914e"
+
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
@@ -3671,6 +3675,13 @@ react-event-listener@^0.5.1:
 react-google-login-component@^0.9.0:
   version "0.9.0"
   resolved "https://registry.yarnpkg.com/react-google-login-component/-/react-google-login-component-0.9.0.tgz#11663f8cb94e804a2e1a7d573b4315fba80e0870"
+
+react-google-login@^3.0.4:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/react-google-login/-/react-google-login-3.0.4.tgz#fe06a89047cfea0140fe086f923b77ac57b2c7fa"
+  dependencies:
+    "@types/react" "*"
+    prop-types "^15.6.0"
 
 react-icon-base@2.1.0:
   version "2.1.0"

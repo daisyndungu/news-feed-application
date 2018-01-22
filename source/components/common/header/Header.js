@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import {PropTypes} from 'prop-types';
+import {connect} from 'react-redux';
 import AppBar from 'material-ui/AppBar';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
-import IconButton from 'material-ui/IconButton';
-import NavigationClose from 'material-ui/svg-icons/navigation/close';
+import FlatButton from 'material-ui/FlatButton';
 
 // import history
 import history from '../../../index';
@@ -21,8 +21,14 @@ class Header extends Component {
             open: !this.state.open
         })
     }
-    onClick(){
+    onTitleClick(){
+        history.push('/sources');
+    }
+
+    logOut(){
+        localStorage.removeItem('access_token')
         history.push('/');
+        alert('You are now logged out')
     }
     render() {
         return(
@@ -31,7 +37,7 @@ class Header extends Component {
                 title = "News Feeds Application"
                 iconClassNameRight="muidocs-icon-navigation-expand-more"
                 onLeftIconButtonClick = {this.drawerHandler}
-                onTitleClick={this.onClick}
+                onTitleClick={this.onTitleClick}
                 />
                 <Drawer open={this.state.open} class="drawer">
                     <AppBar className="menu"
@@ -39,10 +45,16 @@ class Header extends Component {
                     iconClassNameRight="muidocs-icon-navigation-expand-more"
                     onLeftIconButtonClick = {this.drawerHandler}
                     />
-                    <MenuItem>Log out</MenuItem>
+                    <MenuItem>
+                        <FlatButton
+                        label='log out'
+                        onClick={this.logOut}
+                        />
+                    </MenuItem>
                 </Drawer>
             </div>
         );
     }
 }
-export default Header
+
+export default Header;

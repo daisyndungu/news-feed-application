@@ -13,8 +13,8 @@ import './articlepage.scss'
 
 class ArticlesPage extends Component {
     componentDidMount() { 
-        this.source_id = this.props.match.params.source_id
-        this.props.dispatch(articleActions.loadArticles(this.source_id));
+        this.sourceId = this.props.match.params.sourceId
+        this.props.dispatch(articleActions.loadArticles(this.sourceId));
     }
     render (){
         return (
@@ -32,7 +32,6 @@ class ArticlesPage extends Component {
                             <h6>Author: {article.author}</h6>
                             <h6>Published At: {dateformat(article.publishedAt, "fullDate")} </h6>
                         </CardTitle>
-                    
                     </Card>
                 )}
             </div>

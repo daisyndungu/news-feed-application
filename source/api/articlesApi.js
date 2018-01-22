@@ -12,7 +12,7 @@ export default class ArticlesApi {
             })
         .catch(
             error => {
-                console.log(error, 'no article loaded');
+                console.log(error, 'no articles loaded');
                 return error;
             }
         )

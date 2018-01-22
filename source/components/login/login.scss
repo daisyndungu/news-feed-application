@@ -1,0 +1,16 @@
+.login-container{
+    .button{
+        width: 200px;
+        height: 45px;
+        margin: 350px 400px 400px 500px !important ;
+        background-color: #db3236;
+        font-size: 1.0rem;        
+        color: white;
+    }
+    .button:hover {
+        color: white;
+        background-color: #db3236 ;
+        box-shadow: 0 7px 20px #bbb;
+        transform: scale(1.15);
+    }
+}

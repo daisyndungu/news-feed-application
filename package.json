@@ -17,6 +17,7 @@
     "prop-types": "^15.6.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
+    "react-google-login": "^3.0.4",
     "react-google-login-component": "^0.9.0",
     "react-icons": "^2.2.7",
     "react-redux": "^5.0.6",
